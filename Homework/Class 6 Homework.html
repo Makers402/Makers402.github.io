@@ -6,35 +6,42 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             *{margin:0;}
-            h1{display: block; height: 10vh; background-color:#acd373;}
-            nav{ display: inline;}
-            div{ width:10vh; height: 10vh; background-color: #89a85c;display:inline ; float:right;  }
-            .img {height:7vh; align-left:7vh ;}
-            container{display:block; background-color: #9abd67; height:90vh;}
-            
+            *{box-sizing: border-box;}
+            h1 {height: 10vh; width: 100%; background-color: #acd373; display: inline-block;}
+            img.logo {height: 8vh; padding-top: 2.5vh;padding-left: 1.5vh;}        
+            nav { height:10vh; width:10vh; background-color: #89a85c; display: inline; position: absolute; top:0; right:0;padding-top: 1.5vh;padding-left: 3vh; padding-top: 2vh;}
+          
+            container{height:100vh; display:block; background-color: #9abd67;}
+            p,.b{text-align: center;}
+            b{margin-top: 20vh;}
+            img#icon2{position: fixed; bottom:0; right:0; display: block; width: 100vw; }
          
         
         </style>
     </head>
-    <body> 
-        <h1><img src="SixteenDesignImages/1logo.png"/>
-            <nav>
-            <div>
-                <i class="fa fa-bars"></i>
-            </div>
+    <body>
+    <h1>
+        <div class="a1"><img class="logo" src="SixteenDesignImages/1logo.png"/></div>
+            <nav class="nav">
+                <i id="2" class="fa fa-bars"></i>
             </nav>
-        </h1>
+       
+    </h1> 
     <container>
+        <br/>
         <h2 class="b">We are the 16 Creative Agency
-             
+            
         </h2>
-       <p>Based on Jarkarut, Indonesia</p>
+                    <p>Based on Jarkarut, Indonesia</p> 
         <div class="a">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <i id="icon1" class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+          <div>
+          <img id="icon2" src="SixteenDesignImages/4siluetBG.png"/>
         </div>
     </container> 
         
-            
+      
   
        
         
