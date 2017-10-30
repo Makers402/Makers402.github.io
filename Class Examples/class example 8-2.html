@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .fix{
+                height: 1px;
+            }
+            
+            body{
+                margin: 0;
+            }
+            
+            header{
+                height: 20vh;
+                background-color: blue;
+            }
+            
+            #mobileLogo{
+                width: 20vw;
+                height: 10vh;
+                background-color: red;
+                margin-top: 5vh;
+                margin-left: 2vw;
+            }
+            
+            #desktopLogo{
+                display: none;
+            }
+            
+            main{
+                min-height: 70vh;
+                background-color: green;
+            }
+            
+            .column{
+                display: inline-block;
+                vertical-align: top;
+                width: 96%;
+                min-height: 30vh;
+                box-sizing: border-box;
+                padding: 2vw;
+                margin: 2%;
+                background-color: rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
+            }
+            
+            footer{
+                height: 10vh;
+                background-color: red;
+            }
+            
+            
+            @media all and (min-width: 700px){
+                
+                .column{
+                    width: 46%;
+                }
+                
+            }
+            
+            
+            @media all and (min-width: 1000px){
+                
+                .column{
+                    width: 29.333333%;
+                }
+                
+                #mobileLogo{
+                    display: none;
+                }
+                
+                #desktopLogo{
+                    display: block;
+                    width: 20vw;
+                    height: 10vh;
+                    background-color: yellow;
+                    margin-top: 5vh;
+                    margin-left: 2vw;
+                }
+            }
+            
+            
+            @media all and (min-width: 1200px){
+                .column{
+                    width: 21%;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="fix"></div>
+            <div id="mobileLogo">MOBILE</div>
+            <div id="desktopLogo">DESKTOP</div>
+        </header>
+        <main>
+            <div class="column">Column 1</div><!--
+            --><div class="column">Column 2</div><!--
+            --><div class="column">Column 3</div><!--
+            --><div class="column">Column 4</div><!--
+            --><div class="column">Column 5</div><!--
+            --><div class="column">Column 6</div><!--
+            --><div class="column">Column 7</div><!--
+            --><div class="column">Column 8</div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
