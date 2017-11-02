@@ -1,0 +1,63 @@
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .desktop {
+            background-repeat: no-repeat;
+            background-image: url(Aldermans%20Logo.jpg);
+            display: inline-block;
+            width: 100%;
+            height: 20vh;
+            background-size: 100vw 20vh;
+        }
+
+        .column {
+            width: 33.333%;
+            background-color: #197f25;
+            display: inline-block;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            border: .5vh solid #9e2b2b;
+        }
+
+        container {}
+
+        h1 {
+            background-repeat: no-repeat;
+            background-color: aqua;
+            display: inline-block;
+            width: 100%;
+            
+            background-size: 100vw 20vh;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #197f25;
+            font-size: 2vh;
+        }
+
+        .bcolumn {
+            min-width: 50%;
+            min-height: 30vh;
+            display: inline-block;
+        }
+
+        #ltext {
+            background-color: aqua
+        }
+
+        #rimg {
+            background-image: url(Aldermans%20Logo-2.jpg);
+        }
+
+        #btext {
+            background-color: brown;
+        }
+
+        #bimg {
+            background-color: orangered;
+        }
+      
