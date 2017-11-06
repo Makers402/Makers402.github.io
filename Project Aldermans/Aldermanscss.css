@@ -26,11 +26,9 @@
 
         h1 {
             background-repeat: no-repeat;
-            background-color: aqua;
             display: inline-block;
             width: 100%;
             
-            background-size: 100vw 20vh;
         }
 
         h2 {
@@ -41,7 +39,7 @@
 
         .bcolumn {
             min-width: 50%;
-            min-height: 30vh;
+            min-height: 35vh;
             display: inline-block;
         }
 
@@ -50,7 +48,10 @@
         }
 
         #rimg {
-            background-image: url(Aldermans%20Logo-2.jpg);
+            background-color: darkorange;
+            /*background-image: url(Aldermans%20Logo-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;*/
         }
 
         #btext {
@@ -60,4 +61,6 @@
         #bimg {
             background-color: orangered;
         }
-      
+
+        
+    

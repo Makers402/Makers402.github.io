@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+#ltop { 
+    width: 20%;
+    height: 20vh;
+    display: inline-block;
+    background-color: aqua;
+}
+#rtop {
+    width: 80%;
+    height: 20vh;
+    display: inline-block;
+    background-color: orangered;
+}

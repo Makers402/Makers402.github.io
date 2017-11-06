@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    box-sizing:border-box;
+    vertical-align: top;
+}
+body {text-align: center;}
+.hcolumn {
+    display: inline-block;
+}
+header {
+    min-heigth: 20vh;
+}
+#left {
+    width:25%;
+    height:20vh;
+    background-color:darkblue;
+}
+#right { 
+    width: 75%;
+    height: 20vh;
+    background-color: red;
+}
+container {
+    background-color: gray;
+    min-height: 50vh;
+    display: block;
+}
+.bcolumn {
+    min-height: 20vh;
+    display: inline-block;
+    
+}
+#bleft {
+    background-color: yellow;
+    width:50%;
+}
+#bright {
+    background-color: purple;
+    width:50%;
+}
+footer {
+    width:100%;
+    min-height: 10vh;
+    background-color: green;
+    display: inline-block;
+}
