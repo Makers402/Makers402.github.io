@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
+        <style>
+            body{
+                margin: 0;
+            }
+            
+            header{
+                height: 10vh;
+                background-color: rgb(172,211,115);
+            }
+            
+            #logo{
+                height: 7vh;
+                margin-left: 5vw;
+                margin-top: 1.5vh;
+            }
+            
+            nav{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 10vh;
+                width: 10vh;
+                background-color: rgb(137, 168, 92);
+                cursor: pointer;
+            }
+            
+            #hamburger{
+                height: 4vh;
+                width: 4vh;
+                margin-left: 3vh;
+                margin-top: 3vh;
+            }
+            
+            main{
+                height: 90vh;
+                background-color: rgb(154, 189, 103);
+                background-image: url('SixteenDesignImages/4siluetBG.png');
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                background-size: 100%;
+                text-align: center;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: rgb(245, 245, 245);
+            }
+            
+            .fix{
+                height: 1px;
+            }
+            
+            h1{
+                font-size: 5vmin;
+                margin-top: 25vh;
+                margin-bottom: 0;
+            }
+            
+            h2{
+                font-size: 3.5vmin;
+                font-weight: normal;
+                font-style: italic;
+                margin: 0;
+            }
+            
+            #arrow{
+                height: 3vh;
+                margin-top: 5vh;
+            }
+            #desktopNav {
+                display: none;
+            }
+            
+            @media all and (min-width:1000px){
+                nav{
+                    display:none;
+                }
+                #desktopNav {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin-right: 7vw;
+                    color: white;
+                }
+                .desktopNavlinks {
+                    font-weight: bold;
+                    font-size: 2.5vh;
+                    font-family: "Source Sans Pro";
+                    color: white;
+                    text-decoration: none;
+                    line-height: 10vh;
+                    margin-left: 1.5vw;
+                    margin-right: 1.5vw;  
+                }
+                main{ background-image: url(Desktop_Sixteen/4siluetBGDesktop.png)
+                }
+                #logo{
+                    margin-left: 7vw;
+                }
+               
+            }
+            @media all and (min-width:1200px){
+                #logo{ 
+                    margin-left:12.5vw;
+                }
+                #desktopNav{
+                    margin-right: 12.5vw;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="SixteenDesignImages/1logo.png" />
+            <nav>
+                <img id="hamburger" src="SixteenDesignImages/2icon.png" />
+            </nav>
+            <div id="desktopNav">
+                
+                <a href="#" class="desktopNavlinks">Home</a>|
+                <a href="#" class="desktopNavlinks">About</a>
+                <a href="#" class="desktopNavlinks">Service</a>|
+                <a href="#" class="desktopNavlinks">Team</a>|
+                <a href="#" class="desktopNavlinks">Works</a>|
+                <a href="#" class="desktopNavlinks">Client Say</a>|
+                <a href="#" class="desktopNavlinks">Blog</a>|
+                <a href="#" class="desktopNavlinks">Contact</a>|
+                <a href="#" class="desktopNavlinks">Home</a>|
+            </div>
+        </header>
+        <main>
+            <div class="fix"></div>
+            <h1>WE ARE SIXTEEN CREATIVE AGENCY</h1>
+            <br/>
+            <h2>Based on Jakarta, Indonesia</h2>
+            <img id="arrow" src="SixteenDesignImages/3arrow.png" />
+        </main>
+    </body>
+</html>
