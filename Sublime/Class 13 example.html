@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button type="button" id="click"> Button </button>
+
+
+
+
+
+
+		
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+  	
+  </script>	
+	<script>
+		var x = 5;
+		var eventobject = {
+			number : [],
+			event : [],
+			temp : 40,
+		};
+		console.log("The value of x is: "+x);
+
+		
+		$("#click").click(function(e){
+			var y = 2;
+			x++;
+			console.log("The value of x is: "+x);
+			eventobject.number.push(x);
+		});
+
+		
+	</script>
+</body>
+</html>

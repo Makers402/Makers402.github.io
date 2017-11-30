@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #loggedIn {
+            display: none;
+            
+        
+        }
+            #logout {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: red;
+                
+            }
+            #logout:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+    </style>
+    </head>
+<body>
+    <div id="notLoggedIn">
+        <h1>Please enter your name</h1>
+        <input type="text" id="name"/>
+        <button type="button" id="submit">Submit</button>
+    
+    </div>
+    <div id="loggedIn">
+        <span id="loggedout">Logout</span>
+        <h1>Hello <span id="userName"></span></h1>
+        Set background color:
+        <input type="color" id="userColor"/>
+        <button type="button" id="saveColor">Save Color</button>
+    
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        function showName(userName){
+            $("#notLoggedIn").hide();
+            $("#loggedIn").show();
+            $("#userName").text(userName);
+            localStorage.name = userName;
+        }
+        $("#submit").click(function(e){
+            var userName = $("#name").val();
+            $("#notLoggedIn").hide();
+            $("#loggedIn").show();
+            $("#userName").text(userName);
+            localStorage.name = userName;
+        })
+        if(localStorage.name != undefined){
+            showName(localStorage.name);
+            if(localStorage.color != undefined){
+                $("body").css("background-color", localStorage.color);
+            }
+            
+        }
+        @("logout").click(function(e){
+            $("#notLoggedIn").show();
+            $("#loggedIn").hide();
+            localStorage.removeItem("name");
+            localStorage.removeItem("color");
+            $("body").css("background-color", "white");
+        });
+        $("#saveColor").click(function(e){
+            var userColor = $("#userColor").val();
+            localStorage.color = userColor;
+            $("body").css("background-color")
+            localStorage.color = userColor;
+        });
+    
+    </script>
+    
+</body>
+</html>

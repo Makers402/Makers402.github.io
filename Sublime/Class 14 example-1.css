@@ -1,0 +1,8 @@
+.box {
+	display: inline-block;
+	width: 20%;
+	height: 20vh;
+	background-color:yellow;
+	vertical-align: top;
+	margin: 2vw;
+

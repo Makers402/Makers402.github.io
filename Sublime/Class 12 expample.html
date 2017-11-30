@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	body{
+		background-color: green;
+	}
+	.box{
+		display: inline-block;
+		width: 20%;
+		height: 20vh;
+		margin: 2vw;
+		background-color: lightblue;
+		vertical-align: top;
+	}
+		
+	</style>
+	
+</head>
+<body>
+	<button type="button" id="clickme">Click Me</button>
+
+	<div class="box">1</div>
+	<div class="box">2</div>
+	<div class="box">3</div>
+	<div class="box">4</div>
+	<div class="box">5</div>
+	<div class="box">6</div>
+	<div class="box">7</div>
+
+
+
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+  	</script>
+  	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  	<script>
+  	$("#clickme").click(function(e){
+  		$("body").animate({"background-color": "red"},3000);
+  	});
+
+  	//listen forclicks on any .box
+  	$(".box").click(function(e){
+  		debugger;
+  	//use the particular element clicked and hide that box
+  	$(this).animate({
+  		"width": "10vw",
+  		"background-color": "rgb(255,255,0)",
+
+  	},3000);
+  });
+  	
+  	
+  </script>
+</body>
+</html>

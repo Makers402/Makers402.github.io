@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
+        <style>
+            body{
+                margin: 0;
+            }
+            
+            header{
+                height: 10vh;
+                background-color: rgb(172,211,115);
+            }
+            
+            #logo{
+                height: 7vh;
+                margin-left: 5vw;
+                margin-top: 1.5vh;
+            }
+            
+            nav{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 10vh;
+                width: 10vh;
+                background-color: rgb(137, 168, 92);
+                cursor: pointer;
+            }
+            
+            #hamburger{
+                height: 4vh;
+                width: 4vh;
+                margin-left: 3vh;
+                margin-top: 3vh;
+            }
+            
+            main{
+                height: 90vh;
+                background-color: rgb(154, 189, 103);
+                background-image: url('SixteenDesignImages/4siluetBG.png');
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                background-size: 100%;
+                text-align: center;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: rgb(245, 245, 245);
+            }
+            
+            .fix{
+                height: 1px;
+            }
+            
+            h1{
+                font-size: 5vmin;
+                margin-top: 25vh;
+                margin-bottom: 0;
+            }
+            
+            h2{
+                font-size: 3.5vmin;
+                font-weight: normal;
+                font-style: italic;
+                margin: 0;
+            }
+            
+            #arrow{
+                height: 3vh;
+                margin-top: 5vh;
+            }
+            
+            #desktopNav{
+                display: none;
+            }
+            
+            #mobileMenu{
+                position: fixed;
+                right: -100%;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            
+            .mobileNavLinks{
+                display: block;
+                height: 12.5vh;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                line-height: 12.5vh;
+                border-top: 2px solid white;
+                box-sizing: border-box;
+            }
+            
+            .mobileNavLinks:hover{
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            
+            @media all and (min-width: 1000px) {
+                nav{
+                    display: none;
+                }
+                
+                #desktopNav{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin-right: 7vw;
+                }
+                
+                .desktopNavLinks{
+                    font-weight: bold;
+                    font-size: 2.5vh;
+                    font-family: "Source Sans Pro";
+                    color: white;
+                    text-decoration: none;
+                    line-height: 10vh;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    border-left: 1px solid white;
+                }
+                
+                #firstLink{
+                    border: 0;
+                }
+                
+                main{
+                    background-image: url('SixteenDesignImages/4silhouetteBGDesktop.png');
+                }
+                
+                #logo{
+                    margin-left: 7vw;
+                }
+                
+                #mobileMenu{
+                    display: none;
+                }
+            }
+            
+            @media all and (min-width: 1200px){
+                #logo{
+                    margin-left: 12.5vw;
+                }
+                
+                #desktopNav{
+                    margin-right: 12.5vw;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="mobileMenu">
+            <a href="#" class="mobileNavLinks">HOME</a>
+            <a href="#" class="mobileNavLinks">ABOUT</a>
+            <a href="#" class="mobileNavLinks">SERVICES</a>
+            <a href="#" class="mobileNavLinks">TEAM</a>
+            <a href="#" class="mobileNavLinks">WORKS</a>
+            <a href="#" class="mobileNavLinks">CLIENT SAY</a>
+            <a href="#" class="mobileNavLinks">BLOG</a>
+            <a href="#" class="mobileNavLinks">CONTACT</a>
+        </div>
+        <header>
+            <img id="logo" src="SixteenDesignImages/1logo.png" />
+            <nav>
+                <img id="hamburger" src="SixteenDesignImages/2icon.png" />
+            </nav>
+            <div id="desktopNav">
+                <a href="#" class="desktopNavLinks" id="firstLink">HOME</a>
+                <a href="#" class="desktopNavLinks">ABOUT</a>
+                <a href="#" class="desktopNavLinks">SERVICES</a>
+                <a href="#" class="desktopNavLinks">TEAM</a>
+                <a href="#" class="desktopNavLinks">WORKS</a>
+                <a href="#" class="desktopNavLinks">CLIENT SAY</a>
+                <a href="#" class="desktopNavLinks">BLOG</a>
+                <a href="#" class="desktopNavLinks">CONTACT</a>
+            </div>
+        </header>
+        <main>
+            <div class="fix"></div>
+            <h1>WE ARE SIXTEEN CREATIVE AGENCY</h1>
+            <br/>
+            <h2>Based on Jakarta, Indonesia</h2>
+            <img id="arrow" src="SixteenDesignImages/3arrow.png" />
+        </main>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            
+            //on click of nav
+            $("nav").click(function(e){
+                //we want to select the mobileMenu
+                //animate it on screen
+                $("#mobileMenu").animate({
+                    right: 0
+                }, 250);
+            });
+            
+            
+            //on click of any of the mobile nav links
+            $(".mobileNavLinks").click(function(e){
+                //hide the mobileMenu
+                $("#mobileMenu").animate({
+                    right: "-100%"
+                }, 250);
+            });
+            
+        </script>
+    </body>
+</html>

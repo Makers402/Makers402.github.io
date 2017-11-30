@@ -1,0 +1,1 @@
+$("#pickNumber").on("click", randomNumber);

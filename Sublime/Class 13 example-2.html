@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<style>
+		.box {
+			display: inline-block;
+			vertical-align: top;
+			width: 20%;
+			height: 20vh;
+			background-color: blue;
+			margin: 2vw;
+		}
+		.selected {
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="add">Add Button</button>
+	<h1 id="selectedBoxes">0 boxes selected</h1>
+	<label>Box Color</label>
+	<input type="text" id="boxColor"/>
+	<button type="button" id="applyColor"> Apply Color</button>
+	
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+   </script>
+   <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+   <script>
+   	$("body").on("click", ".box", function(e){
+   		$(this).toggleClass("selected");
+   		var numBoxesSelected = $(".selected").length;
+   		$("#selectedBoxes").text("There are " + numBoxesSelected + " boxes selected")
+   	});
+   	$("#add").click(function(e){
+   		$("body").append("<div class='box'></div>")
+   	});
+   	//on click of applyColor button
+   	$("#applyColor").click(function(e){
+   		//Read in user enter color
+   		var userColor = $("#boxColor").val();
+   		//change all boxes to that color
+   		if(userColor !=""){
+   			$(".box").css("background-color", userColor);
+   		}
+   	});
+   	
+   	
+
+   </script>	
+</body>
+</html>
