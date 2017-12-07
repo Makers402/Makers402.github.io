@@ -4,17 +4,28 @@
 	<title></title>
 </head>
 <body>
-	<h1>Click button to Generate A Random Number</h1>
-	<button type="button" id="pickNumber">Random Number</button><br/>
 	<h1>Guess a number 1-100</h1>
-	<input type="text" id="guessNumber"/>
-	<button type="buttom" id="submit">Submit</button>
+	<input type="text" id="guess"/>
+	<button type="buttom" id="tryNumber">Guess</button>
+	<span id="counter"></span>
+	<br/>
+	<label>Min</label>
+	<input id="min" value="1"/>
+	<label>Max</label>
+	<input id="max" value="100"/>
+	<br/>
+	<button id="button" id="reset">Reset</button>
+	<br/>
+	<br/>
+	<br/>
+		<span id="result"></span>
 
 <script
   src="https://code.jquery.com/jquery-2.2.4.js"
   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
   crossorigin="anonymous"></script>
   <script src="../JS/common.js"></script>
+
   <script src="class15homework.js"></script>
 </body>
 </html>
