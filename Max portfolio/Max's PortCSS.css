@@ -46,7 +46,7 @@ h2 {
 	display: flex;
 	justify-content: center space-around;
 	align-items: center;
-	background-image: url(../images/creator-lake-1.jpg);
+	background-image: url(../images/craterLake/crater-lake-1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover, contain;
 	height: 100vh;

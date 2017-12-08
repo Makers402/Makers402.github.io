@@ -31,10 +31,10 @@ $("#tryNumber").click(function(e){
 $("#reset").click(function(e){
 	 var min = $("#min").val();
 	 var max = $("#max").val();
-	 computerNumber = randomNumber(1,100);
+	 computerNumber = randomNumber(min,max);
 	 counter = 0;
 	 gameOver = false;
 	 $("#counter").text("");
 	 $("#result").text("");
 	 $("#guess").val("");
-}),
+});

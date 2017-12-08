@@ -25,10 +25,9 @@
         <h1>Please enter your name</h1>
         <input type="text" id="name"/>
         <button type="button" id="submit">Submit</button>
-    
     </div>
     <div id="loggedIn">
-        <span id="loggedout">Logout</span>
+        <span id="logout">Logout</span>
         <h1>Hello <span id="userName"></span></h1>
         Set background color:
         <input type="color" id="userColor"/>
@@ -38,8 +37,7 @@
     <script
   src="https://code.jquery.com/jquery-2.2.4.js"
   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-            crossorigin="anonymous">
-    </script>
+            crossorigin="anonymous"></script>
     <script>
         function showName(userName){
             $("#notLoggedIn").hide();
@@ -47,13 +45,11 @@
             $("#userName").text(userName);
             localStorage.name = userName;
         }
-        $("#submit").click(function(e){
-            var userName = $("#name").val();
-            $("#notLoggedIn").hide();
-            $("#loggedIn").show();
-            $("#userName").text(userName);
-            localStorage.name = userName;
-        })
+      $("#submit").click(function(e){
+                var userName = $("#name").val();
+                showName(userName);
+            });
+
         if(localStorage.name != undefined){
             showName(localStorage.name);
             if(localStorage.color != undefined){
@@ -61,7 +57,7 @@
             }
             
         }
-        @("logout").click(function(e){
+        $("logout").click(function(e){
             $("#notLoggedIn").show();
             $("#loggedIn").hide();
             localStorage.removeItem("name");
@@ -70,7 +66,6 @@
         });
         $("#saveColor").click(function(e){
             var userColor = $("#userColor").val();
-            localStorage.color = userColor;
             $("body").css("background-color")
             localStorage.color = userColor;
         });

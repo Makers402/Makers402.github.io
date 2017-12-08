@@ -116,16 +116,24 @@
  		counter++;
 	}
 	$("#add").click(addBall);
-	function checkCollison(){
+	
+	function checkCollision(){
 		for(var i in listOfBalls){
 			var currentBall = listOfBalls[i];
-			var currBallTop = currentBall.top;
-			var currBallLeft = currentBall.left;
-			for(var j in listOfBalls[j];
-				var compBalltop = listOfBalls.top;
-				var compBallLeft = comball.left;
-				)
-					}
+			var curBallTop = currentBall.top;
+			var curBallLeft = currentBall.left;
+			for (var j in listOfBalls){
+				var compBall = listOfBalls[j];
+				var compBallTop = compBall.top;
+				var compBallLeft = compBall.left;
+				var diffTop = Math.abs(curBalltop - compBalltop);
+				var diffLeft = Math.abs(curBallleft - compBallLeft);
+				var diffDiag = pyth(diffLeft, diffTop);
+				if(diffDiag < circleSize*2){
+					alert("collision");
+				}
+			}
+		}
 	}
 
 	function moveAll(){
@@ -135,6 +143,7 @@
 		for(var i in listOfBalls){
 			listOfBalls[i].move();
 		}
+		checkCollision();
 	}
 	setInterval(moveAll, 1);
  	

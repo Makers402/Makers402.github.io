@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.box {
+			width: 25vw;
+			height: 25vw;
+			border: 1px solid black;
+			box-sizing: border-box;
+			margin: 2vw;
+			display: inline-block;
+			vertical-align: top;
+			background-color: white
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box">Text inside box 1</div>
+	<div class="box">Text inside box 2</div>
+	<div class="box">Text inside box 3</div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+  </script>
+  <script src="../JS/common.js"></script>
+  
+  	  <script>
+            $("*").rainbowfy({
+                sameColor: false,
+                alpha: 0.3
+            }).css("height", "30vh");
+       </script>
+
+</body>
+</html>

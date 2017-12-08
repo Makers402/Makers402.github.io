@@ -8,8 +8,8 @@ $("#mobileMenu").click(function(e){
 		right: "-100%"
 	},500);
 });
-$(".his").click(function(e){
-	$(".middle").animate({
-		background-image: "url(../images/Max-2.jpg)"
-	},100);
-});
+//*$(".his").click(function(e){
+//	$(".middle").animate({
+//		background-image: "url(../images/Max-2.jpg)"
+//	},100);
+//});
