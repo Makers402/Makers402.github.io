@@ -57,7 +57,7 @@
             }
             
         }
-        $("logout").click(function(e){
+        $("#logout").click(function(e){
             $("#notLoggedIn").show();
             $("#loggedIn").hide();
             localStorage.removeItem("name");
@@ -66,7 +66,7 @@
         });
         $("#saveColor").click(function(e){
             var userColor = $("#userColor").val();
-            $("body").css("background-color")
+            $("body").css("background-color", userColor);
             localStorage.color = userColor;
         });
     
