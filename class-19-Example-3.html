@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                perspective: 1000px;
+                perspective-origin: center;
+            }
+            
+            .cube{
+                transform-style: preserve-3d;
+                width: 30vw;
+                height: 30vw;
+                position: relative;
+                top: 20vh;
+                left: 30vw;
+                transition: 1s;
+            }
+            
+            .side{
+                width: 30vw;
+                height: 30vw;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 20vw;
+                text-align: center;
+                line-height: 30vw;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+            .front{
+                background-color: rgba(255, 0, 0, 0.8);
+                transform: translateZ(15vw);
+            }
+            
+            .back{
+                background-color: rgba(0, 255, 0, 0.8);
+                transform: rotateY(180deg) translateZ(15vw);
+            }
+            
+            .top{
+                background-color: rgba(0, 0, 255, 0.8);
+                transform: rotateX(90deg) translateZ(15vw);
+            }
+            
+            .bottom{
+                background-color: rgba(255, 255, 0, 0.8);
+                transform: rotateX(-90deg) translateZ(15vw);
+            }
+            
+            .left{
+                background-color: rgba(0, 255, 255, 0.8);
+                transform: rotateY(-90deg) translateZ(15vw);
+            }
+            
+            .right{
+                background-color: rgba(255, 0, 255, 0.8);
+                transform: rotateY(90deg) translateZ(15vw);
+            }
+            
+            .showFront{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            
+            .showBack{
+                transform: rotateY(180deg);
+            }
+            
+            .showTop{
+                transform: rotateX(-90deg);
+            }
+            
+            .showBottom{
+                transform: rotateX(90deg);
+            }
+            
+            .showLeft{
+                transform: rotateY(90deg);
+            }
+            
+            .showRight{
+                transform: rotateY(-90deg);
+            }
+        </style>
+    </head>
+    <body>
+        <label>Select Side: </label>
+        <select id="selectedSide">
+            <option>Front</option>
+            <option>Back</option>
+            <option>Top</option>
+            <option>Bottom</option>
+            <option>Left</option>
+            <option>Right</option>
+        </select>
+        <button type="button" id="showSelectedSide">Show Side</button>
+        
+        <div class="cube">
+            <div class="front side">1</div>
+            <div class="back side">2</div>
+            <div class="top side">3</div>
+            <div class="bottom side">4</div>
+            <div class="left side">5</div>
+            <div class="right side">6</div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script src="JS/Common.js"></script>
+        <script>
+            
+            function showSide(sideName){
+                $(".cube").removeClass("showFront")
+                            .removeClass("showBack")
+                            .removeClass("showTop")
+                            .removeClass("showBottom")
+                            .removeClass("showLeft")
+                            .removeClass("showRight")
+                            .addClass(sideName);
+            }
+            
+            var sideNames = [
+                "showFront",
+                "showBack",
+                "showTop",
+                "showBottom",
+                "showLeft",
+                "showRight"
+            ];
+            
+//            var lastSideSelected = "";
+//            setInterval(function(){
+//                var number = randomNumber(0, 5);
+//                var newSideName = sideNames[number];
+//                while(newSideName == lastSideSelected){
+//                    number = randomNumber(0, 5);
+//                    newSideName = sideNames[number];
+//                }
+//                lastSideSelected = newSideName;
+//                showSide(newSideName);
+//            }, 1000);
+            
+            var lastSideShown = 0;
+            $(".cube").click(function(){
+                if(lastSideShown == 5){
+                    lastSideShown = 0;
+                }else{
+                    lastSideShown++;
+                }
+                var newSideName = sideNames[lastSideShown];
+                showSide(newSideName);
+            });
+            
+            $("#showSelectedSide").click(function(e){
+                var newSide = $("#selectedSide").val();
+                showSide("show"+newSide);
+            });
+        </script>
+    </body>
+</html>

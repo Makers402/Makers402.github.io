@@ -1,0 +1,38 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.container {
+    display: flex;
+    justify-content: space-around
+    
+}
+h1 {
+    font-size: 5vh;
+}
+.listBox {
+    min-width: 33.3333%;
+    min-height: 40vh;
+    display: inline-block;
+    border: 2px solid black;
+    
+}
+#groceryList {
+    background-color: rgba(76,109,255,0.5)
+}
+#currentTask {
+    background-color: rgba(20,204,103,0.5)
+}
+#longTermTask {
+    background-color: rgba(255,69,185,0.5)
+}
+.grocery {
+    
+}
+.currentTask {
+    
+}
+.longTermTask {
+    
+}

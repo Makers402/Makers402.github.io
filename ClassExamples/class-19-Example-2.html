@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .card {
+            width: 20vw;
+            height: 20vw;
+            position: relative;
+            display: inline-block;
+            transform-style: preserve-3d;
+            transition: 1s;
+            
+        }
+        .side {
+            width: 20vw;
+            height: 20vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        .back {
+            transform: translateZ(180deg);
+            
+        
+        }
+        #mountain1 {
+            background-image: url('http://www.conservationmagazine.org/wp-content/uploads/2013/04/moving-green-mountains.jpg');
+            background-size: cover;
+        }
+        #mountain2 {
+            background-image: url('http://www.conservationmagazine.org/wp-content/uploads/2013/04/moving-green-mountains.jpg');
+            background-size: cover;
+        }
+        #mountain3 {
+            background-image: url('http://www.conservationmagazine.org/wp-content/uploads/2013/04/moving-green-mountains.jpg');
+            background-size: cover;
+        }
+        #mountain4 {
+            background-image: url('http://www.conservationmagazine.org/wp-content/uploads/2013/04/moving-green-mountains.jpg');
+            background-size: cover;
+        }
+    </style>
+    
+    
+</head>
+    <body>
+        <div class="card">
+            <div id="mountain1" class="front side"></div>
+            <div class="front side"></div>
+                 
+        </div>
+         <div class="card">
+            <div id="mountain2" class="front side"></div>
+            <div class="front side"></div>
+                 
+        </div>
+         <div class="card">
+            <div id="mountain3" class="front side"></div>
+            <div class="front side"></div>
+                 
+        </div>
+         <div class="card">
+            <div id="mountain4" class="front side"></div>
+            <div class="front side"></div>
+                 
+        </div>
+        
+    
+    
+      
+        
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    <script>
+        $(".card").click(function(e){
+           $(this).toggleClass("flip") 
+        });
+        
+    </script>
+    </body>
+</html>

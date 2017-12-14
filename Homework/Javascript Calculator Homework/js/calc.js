@@ -4,29 +4,6 @@ To use this function, pass in the entire text string from your calculator
 It will return the math result for you to display
 */
 
-
-var resetNumber = 0;
-var setValue = 0;
-
-$(".clear").click(function(){
-   resetNumber(0); 
-});
-$(".calcButton calculatorNumber").click(function(e){
- var pressedButton = $(this).val().append();
-    if (pressedButton === 0 + 1){
-        setValue = 0;
-    } else {
-        $(this).val(pressedButton).append(".calcText").text();
-    }
-    
-});
-
-
-
-
-
-
-
 function calculate(input){
     var result = "";
     try{
@@ -44,6 +21,8 @@ function calculate(input){
     }
     return result;
 }
+
+
 // On click of any of the .calculatorNumber or .calculatorOperator buttons
 
 /*
@@ -57,5 +36,27 @@ to check if the current #calcText span's text is equal to 0.
 
 */
 
-
+$(".calculatorClear").click(function(e){
+   console.log("calc clear clicked!");
+    $("#calcText").text("0");
+});
+$(".calculatorEquals").click(function(e){
+    console.log("calc clear clicked!");
+    //get textString
+    var calcText = $("#calcText").text();
+    var result = calculate(calcText);
+    $("#calcText").text(result);
+});
+$(".calculatorNumber, .calculatorOperator ").click(function(e){
+    console.log("calc clear clicked!");
+    var buttonText = $(this).text();
+     var calcText = $("#calcText").text();
+    if(calcText == "0" || calcText == "ERROR"){
+        $("#calcText").text(buttonText);
+    } else {
+       // $("#calcText").append(buttonText);
+        $("#calcText").text(calcText + buttonText);
+    }
+    
+});
 
