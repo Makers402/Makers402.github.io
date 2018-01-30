@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 20vh;
+                background-color: blue;
+            }
+            main {
+                margin-top: 20vh;
+                min-height 70vh;
+            }
+            footer {
+                height: 10vh;
+                background-color: gray;
+            }
+            .link {
+                color: white;
+                line-height: 20vh;
+                font-size: 3vw;
+                margin-left: 3vw;
+            }
+            
+        </style>
+    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <span id="home" class="link">Home</span>
+                <span id="about" class="link">About</span>
+                <span id="contact" class="link">Contact</span>
+            </nav>
+        </header>
+        <main></main>
+        <footer></footer>
+    
+    
+    
+     <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            $(".link").click(function(e){
+               var id = $(this).attr("id");
+                $("main").load(id+".html");
+            });
+            $("main").load("home.html");
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+</html>

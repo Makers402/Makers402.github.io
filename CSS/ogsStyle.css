@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.head {
+    display:inline-block;
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    color:white;
+}
+.navMenu {
+    display:inline-block;
+    width: 10vh;
+    height: 10vh;
+    background-color: green; 
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    
+}

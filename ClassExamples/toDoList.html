@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .list{
+                display: inline-block;
+                width: 33.33333%;
+                vertical-align: top;
+                box-sizing: border-box;
+                min-height: 70vh;
+            }
+            
+            .insideList{
+                width: 100%;
+                height: 70vh;
+                text-align: center;
+            }
+            
+            #currentTasks{
+                background-color: lime;
+                border-right: 2px solid black;
+            }
+            
+            #groceryTasks{
+                background-color: skyblue;
+                border-left: 2px solid black;
+                border-right: 2px solid black;
+            }
+            
+            #longtermTasks{
+                background-color: yellow;
+                border-left: 2px solid black;
+            }
+            
+            .desc{
+                font-size: 1.5em;
+                cursor: pointer;
+            }
+            
+            .remove{
+                cursor: pointer;
+                display: none;
+                margin-left: 1vw;
+                font-size: 1em;
+                color: red;
+            }
+            
+            .priority{
+                font-weight: bold;
+                color: red;
+            }
+            
+            .crossedOut{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <label>Task name: </label>
+        <input id="task" />
+        <select id="list">
+            <option value="currentTasks">Current Tasks</option>
+            <option value="groceryTasks">Grocery List</option>
+            <option value="longtermTasks">Long Term Tasks</option>
+        </select>
+        <label>Due date: </label>
+        <input type="date" id="due" />
+        <label>High Priority: </label>
+        <input type="checkbox" id="priority" />
+        <button type="button" id="add">Add Task</button>
+        
+        <br/>
+        
+        <div class="list" id="current">
+            <h1>Current Tasks</h1>
+            <div class="insideList" id="currentTasks"></div>
+        </div><!--
+        --><div class="list" id="grocery">
+            <h1>Grocery List</h1>
+            <div class="insideList" id="groceryTasks"></div>
+        </div><!--
+        --><div class="list" id="longterm">
+            <h1>Long Term Tasks</h1>
+            <div class="insideList" id="longtermTasks"></div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            $("#add").click(function(e){
+                console.log("Add button clicked!");
+                var taskName = $("#task").val();
+                $("#task").val("");
+                var listChoice = $("#list").val();
+                var dueDate = $("#due").val();
+                var dueDateText = "";
+                if(dueDate != ""){
+                    dueDateText = " ("+dueDate+")";
+                }
+                var taskPriority = $("#priority").prop("checked");
+                var priorityText = "";
+                if(taskPriority){
+                    priorityText = " priority";
+                }
+                console.log("Task Name is: "+taskName);
+                console.log("List Choice is: "+listChoice);
+//                if(listChoice == "Current Tasks"){
+//                    $("#currentTasks").append("<div class='task'><span class='desc'>"+taskName+"</span><span class='remove'>x</span></div>");
+//                }else if(listChoice == "Grocery List"){
+//                    $("#groceryTasks").append("<div class='task'><span class='desc'>"+taskName+"</span><span class='remove'>x</span></div>");
+//                }else if(listChoice == "Long Term Tasks"){
+//                    $("#longtermTasks").append("<div class='task'><span class='desc'>"+taskName+"</span><span class='remove'>x</span></div>");
+//                }else{
+//                    console.log("ERROR unknown listChoice of: "+listChoice);
+//                }
+                $("#"+listChoice).append("<div class='task "+priorityText+"'><span class='desc'>"+taskName+dueDateText+"</span><span class='remove'>x</span></div>");
+                
+            });
+            
+            $("body").on("click", ".remove", function(e){
+                $(this).parent().remove();
+            });
+            
+            $("body").on("click", ".desc", function(e){
+                $(this).toggleClass("crossedOut").next().toggle();
+            });
+        </script>
+    </body>
+</html>

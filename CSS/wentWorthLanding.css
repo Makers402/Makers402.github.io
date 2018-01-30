@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+.last {
+    color: #eb4e00;
+}
+.tpara {
+    margin: 0;
+    font-weight:800;
+}
+.tbar {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eb4e00;
+    min-height: 3vh;
+}
+.bclick {
+    background-color: #6ed44c;
+    color: white;
+}
+.bodycontent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bhead {
+    background-color: #eb4e00;
+    display: block;
+    color: white;
+}
+.lead {
+    margin-bottom: 0;
+}
+.headBar {
+    text-align: center;
+}
+.submit {
+    margin: 2px;
+    position: relative;
+    width: 100%;
+    border: 2px solid black;
+}
+.submitForm {
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+.videoPic {
+    background-color: #eb4e00;
+    display:inline-block;
+    border: 2px solid black;
+    position: relative;
+}
+.bholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pcontact {
+    font-weight: 800;
+}
+.bpara {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+#enter {
+    background-color: #eb4e00;
+    color: white;
+    width: 100%;
+    
+}
+.pstyle {
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-width: 0;
+
+}
+
+
+
+
