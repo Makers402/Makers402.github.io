@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    vertical-align: top; 
+    margin: 0; 
+    padding: 0;
 }
 .last {
     color: #eb4e00;
@@ -7,42 +10,54 @@
 .tpara {
     margin: 0;
     font-weight:800;
+    font-family: 'Archivo Black', sans-serif;
 }
 .tbar {
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #eb4e00;
     min-height: 3vh;
+}
+#centerMe {
+    display: block;
 }
 .bclick {
     background-color: #6ed44c;
     color: white;
+    width: 100%;
+    font-family: 'Archivo Black', sans-serif;
 }
 .bodycontent {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .bhead {
+    padding: 3px;
     background-color: #eb4e00;
     display: block;
     color: white;
 }
 .lead {
     margin-bottom: 0;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 1000;
 }
 .headBar {
     text-align: center;
 }
+.vidbackground{
+    display: block;
+    background-color: #eb4e00;
+}
+
 .submit {
+    padding: 1px;
+    height: 25px;
     margin: 2px;
     position: relative;
     width: 100%;
     border: 2px solid black;
+    text-align: center;
 }
 .submitForm {
     flex-direction: column;
@@ -51,7 +66,6 @@
 .videoPic {
     background-color: #eb4e00;
     display:inline-block;
-    border: 2px solid black;
     position: relative;
 }
 .bholder {
@@ -61,26 +75,71 @@
 }
 .pcontact {
     font-weight: 800;
+    font-family: 'Archivo Black', sans-serif;
 }
 .bpara {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 800;
+    font-family: 'Archivo Black', sans-serif;
+    
 }
 #enter {
     background-color: #eb4e00;
     color: white;
     width: 100%;
-    
+    height: 25px;
+    border: none;
+    font-family: 'Archivo Black', sans-serif;
 }
 .pstyle {
+    padding: 2px;
     background-color: black;
     color: white;
     width: 100%;
     border-width: 0;
-
+    text-decoration: none;
+}
+.cpara {
+    font-family: 'Archivo Black', sans-serif;
+}
+.lgvideo {
+    display: none;
+}
+.bpara {
+    display: none;
+}
+.blead {
+    display: none;
+}
+.bimg {
+    height: 50px;
 }
 
+@media all and (min-width: 1000px) {
+    .smvideo {
+        display: none;
+    }
+    .lgvideo {
+    display: block;
+    }
+    .tpara {
+        display: none
+    }
+    .bpara {
+        display: block;
+        font-size: 4vh;
+    }
+    .blead {
+        display: block;
+        font-size: 7vh;
+        font-family: 'Archivo Black', sans-serif;
+    }
+    .lead {
+        display: none;
+    }
+    
+}
 
 
 
